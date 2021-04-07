@@ -2,6 +2,15 @@ const calculatorDisplay = document.querySelector("h1");
 const inputButtons = document.querySelectorAll("button");
 const clearButton = document.getElementById("clear-btn");
 
+// Constants to calculate first and second number based on operator
+const calculate = {
+  "/": (firstNumber, secondNumber) => firstNumber / secondNumber,
+  "*": (firstNumber, secondNumber) => firstNumber * secondNumber,
+  "+": (firstNumber, secondNumber) => firstNumber + secondNumber,
+  "-": (firstNumber, secondNumber) => firstNumber - secondNumber,
+  "=": (firstNumber, secondNumber) => (firstNumber = secondNumber),
+};
+
 let firstValue = 0;
 let operatorValue = "";
 let awaitingNextValue = false;
@@ -29,14 +38,6 @@ function addDecimal() {
   }
 }
 
-const calculate = {
-  "/": (firstNumber, secondNumber) => firstNumber / secondNumber,
-  "*": (firstNumber, secondNumber) => firstNumber * secondNumber,
-  "+": (firstNumber, secondNumber) => firstNumber + secondNumber,
-  "-": (firstNumber, secondNumber) => firstNumber - secondNumber,
-  "=": (firstNumber, secondNumber) => (firstNumber = secondNumber),
-};
-
 function useOperator(operator) {
   const currentValue = Number(calculatorDisplay.textContent);
 
@@ -61,6 +62,14 @@ function useOperator(operator) {
   operatorValue = operator;
 }
 
+// Reset all display
+function resetAll() {
+  firstValue = 0;
+  operatorValue = "";
+  awaitingNextValue = false;
+  calculatorDisplay.textContent = "0";
+}
+
 // Add Event Listeners for numbers, operators, decimal buttons
 inputButtons.forEach((inputButton) => {
   if (inputButton.classList.length === 0) {
@@ -73,14 +82,6 @@ inputButtons.forEach((inputButton) => {
     inputButton.addEventListener("click", () => addDecimal());
   }
 });
-
-// Reset all display
-function resetAll() {
-  firstValue = 0;
-  operatorValue = "";
-  awaitingNextValue = false;
-  calculatorDisplay.textContent = "0";
-}
 
 // Add Clear event
 clearButton.addEventListener("click", resetAll);
