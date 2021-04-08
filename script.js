@@ -1,6 +1,7 @@
 const calculatorDisplay = document.querySelector("h1");
 const inputButtons = document.querySelectorAll("button");
 const clearButton = document.getElementById("clear-btn");
+const deleteButton = document.querySelector('.delete')
 
 // Constants to calculate first and second number based on operator
 const calculate = {
@@ -50,7 +51,6 @@ function useOperator(operator) {
   // Assign firstValue if no value
   if (!firstValue) {
     firstValue = currentValue;
-    // calculatorDisplay.textContent = `${firstValue} ${operatorValue} ${currentValue}`;
   } else {
     const calculation = calculate[operatorValue](firstValue, currentValue);
     calculatorDisplay.textContent = calculation;
@@ -70,6 +70,14 @@ function resetAll() {
   calculatorDisplay.textContent = "0";
 }
 
+function deleteUserInput() {
+  if (calculatorDisplay.textContent.length === 1) {
+    calculatorDisplay.textContent = "0";
+  } else {
+    calculatorDisplay.textContent = calculatorDisplay.textContent.substring(0, calculatorDisplay.textContent.length - 1)
+  }
+}
+
 // Add Event Listeners for numbers, operators, decimal buttons
 inputButtons.forEach((inputButton) => {
   if (inputButton.classList.length === 0) {
@@ -85,3 +93,6 @@ inputButtons.forEach((inputButton) => {
 
 // Add Clear event
 clearButton.addEventListener("click", resetAll);
+
+// Delete User Input 
+deleteButton.addEventListener('click', deleteUserInput)
