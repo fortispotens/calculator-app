@@ -9,13 +9,6 @@ body {
   margin: 0;
   height: 100vh;
   background-color: rgb(199, 199, 199);
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* background: linear-gradient(to bottom, #c6ffdd, #fbd786, #f7797d); */
-  /* background-size: contain; */
-  /* background-repeat: no-repeat; */
-  /* background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); */
 }
 
 .title {
@@ -27,9 +20,15 @@ body {
 .app {
   width: 95%;
   margin: 0 auto;
-  margin-top: 60px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.col-1 {
+  width: 40%;
+  display: flex;
   justify-content: center;
 }
 
@@ -37,12 +36,15 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  /* border: 1px solid red; */
+}
+.col-2 {
+  width: 60%;
 }
 
 .key-takeaways {
+  width: 80%;
+  margin: 0 auto;
   margin-top: 20px;
-  width: 400px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 10px;
@@ -52,7 +54,7 @@ body {
 .html,
 .css,
 .javascript {
-  background: rgb(235, 233, 232);
+  background: rgb(250, 250, 250);
   color: rgb(33, 134, 201);
   margin: 5px;
   border-radius: 12px;
@@ -66,15 +68,37 @@ h3 {
   font-size: 1rem;
   text-align: center;
   font-weight: 900;
+  margin: 0;
+  margin-bottom: 5px;
 }
 
 .htlm .css .javascript,
 p {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   text-align: justify;
   font-weight: 100;
   line-height: 1.5;
   color: black;
+  margin: 0;
+}
+
+.htlm,
+.css,
+.javascript,
+ul {
+  margin: 0;
+}
+
+.htlm .css .javascript,
+li {
+  font-size: 0.75rem;
+  line-height: 2;
+}
+
+.htlm .css .javascript,
+a {
+  text-decoration: none;
+  font-style: italic;
 }
 
 .css {
@@ -180,11 +204,19 @@ button:focus {
 .equal-sign {
   grid-column: -2;
   grid-row: 2 / span 4;
-  background: rgb(13, 206, 87);
+  background: rgb(13, 122, 206);
 }
 
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
+  .col-1 {
+    width: 100%;
+  }
+
+  .col-2 {
+    width: 100%;
+  }
+
   .calculator {
     width: 100%;
   }
@@ -195,7 +227,13 @@ button:focus {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding-top: 30px;
     width: 95%;
+  }
+
+  .key-takeaways {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .calc {
@@ -211,9 +249,9 @@ button:focus {
 }
 
 /* Media Query: Large Smartphone (Vertical) */
-@media screen and (max-width: 768px) {
-  .col {
-    width: 95%;
+@media screen and (max-width: 800px) {
+  .col-1 {
+    width: 100%;
   }
   .app {
     display: flex;
@@ -223,6 +261,15 @@ button:focus {
     margin: 0 auto;
     width: 95%;
   }
+
+  .col-1 {
+    width: 100%;
+  }
+
+  .col-2 {
+    width: 100%;
+  }
+
   .html,
   .css,
   .javascript {
@@ -231,7 +278,7 @@ button:focus {
 }
 
 /* Media Query: Large Smartphone (Vertical) */
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1440px) {
   .html,
   .css,
   .javascript {
