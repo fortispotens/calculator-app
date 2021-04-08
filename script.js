@@ -1,4 +1,5 @@
 const calculatorDisplay = document.querySelector("h1");
+let calculationDisplay = document.querySelector("calculation");
 const inputButtons = document.querySelectorAll("button");
 const clearButton = document.getElementById("clear-btn");
 const deleteButton = document.querySelector('.delete')
@@ -16,6 +17,8 @@ let firstValue = 0;
 let operatorValue = "";
 let awaitingNextValue = false;
 
+calculationDisplay = ''
+
 function sendNumberValue(number) {
   // Replace current display value if first value is entered
   if (awaitingNextValue) {
@@ -25,8 +28,9 @@ function sendNumberValue(number) {
     // if current display value is 0, replace it, if not add number
     const displayValue = calculatorDisplay.textContent;
     calculatorDisplay.textContent =
-      displayValue === "0" ? number : displayValue + number;
+    displayValue === "0" ? number : displayValue + number;
   }
+  console.log(calculatorDisplay.textContent)
 }
 
 function addDecimal() {
@@ -42,9 +46,13 @@ function addDecimal() {
 function useOperator(operator) {
   const currentValue = Number(calculatorDisplay.textContent);
 
+  console.log(operator)
   // Prevent multiple operators
   if (operatorValue && awaitingNextValue) {
+    console.log(calculatorDisplay.textContent)
     operatorValue = operator;
+    console.log(calculatorDisplay.textContent + operatorValue)
+    console.log(calculationDisplay += calculatorDisplay.textContent + operator)
     return;
   }
 
