@@ -254,7 +254,7 @@ button:focus {
   }
 }
 
-/* Media Query: Large Smartphone (Vertical) */
+/* Media Query: Desktop view small screen  */
 @media screen and (max-width: 800px) {
   .col-1 {
     width: 100%;
@@ -283,8 +283,8 @@ button:focus {
   }
 }
 
-/* Media Query: Large Smartphone (Vertical) */
-@media screen and (max-width: 1440px) {
+/* Media Query: Desktop view large screen  */
+@media screen and (max-width: 1300px) {
   .html,
   .css,
   .javascript {
