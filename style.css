@@ -7,12 +7,86 @@ html {
 body {
   font-family: "Comfortaa", sans-serif;
   margin: 0;
-  min-height: 100vh;
+  height: 100vh;
+  background-color: rgb(199, 199, 199);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* background: linear-gradient(to bottom, #c6ffdd, #fbd786, #f7797d); */
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
+  /* background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); */
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.app {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.col {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: linear-gradient(to bottom, #c6ffdd, #fbd786, #f7797d);
-  /* background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); */
+  /* border: 1px solid red; */
+}
+
+.key-takeaways {
+  margin-top: 20px;
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.html,
+.css,
+.javascript {
+  background: rgb(235, 233, 232);
+  color: rgb(33, 134, 201);
+  margin: 5px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  position: relative;
+}
+
+.htlm .css .javascript,
+h3 {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+.htlm .css .javascript,
+p {
+  font-size: 0.85rem;
+  text-align: justify;
+  font-weight: 100;
+  line-height: 1.5;
+  color: black;
+}
+
+.css {
+  right: 120px;
+}
+
+.javascript {
+  left: 80px;
+}
+
+.calc h2 {
+  margin: 30px;
 }
 
 .calculator {
@@ -67,7 +141,7 @@ body {
 }
 
 button {
-  min-height: 50px;
+  min-height: 70px;
   font-size: 20px;
   font-weight: 100;
   border: none;
@@ -112,6 +186,55 @@ button:focus {
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
   .calculator {
+    width: 100%;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     width: 95%;
+  }
+
+  .calc {
+    width: 95%;
+    margin-bottom: 30px;
+  }
+
+  .html,
+  .css,
+  .javascript {
+    position: static;
+  }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 768px) {
+  .col {
+    width: 95%;
+  }
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .html,
+  .css,
+  .javascript {
+    position: static;
+  }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 1120px) {
+  .html,
+  .css,
+  .javascript {
+    position: static;
   }
 }

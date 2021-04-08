@@ -1,46 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
-    <link rel="shortcut icon" href="./images/shortcut-icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="app">
-      <div class="title">Calculator</div>
-      <!-- Calculator -->
-      <div class="calculator">
-        <!-- Display -->
-        <div class="calculator-display">
-          <h1>0</h1>
-        </div>
-        <!-- Buttons -->
-        <div class="calculator-buttons">
-          <button class="operator" value="+">+</button>
-          <button class="operator" value="-">-</button>
-          <button class="operator" value="*">×</button>
-          <button class="operator" value="/">÷</button>
-          <button value="7">7</button>
-          <button value="8">8</button>
-          <button value="9">9</button>
-          <button value="4">4</button>
-          <button value="5">5</button>
-          <button value="6">6</button>
-          <button value="1">1</button>
-          <button value="2">2</button>
-          <button value="3">3</button>
-          <button class="decimal" value=".">.</button>
-          <button value="0">0</button>
-          <button class="clear" id="clear-btn" value="C">C</button>
-          <button class="equal-sign operator" value="=">=</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="shortcut icon" href="./images/shortcut-icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <section class=" app">
+    <div class="col">
+      <div class="calc">
+        <h2 class="title">Calculator</h2>
+
+        <!-- Calculator -->
+        <div class="calculator">
+          <!-- Display -->
+          <div class="calculator-display">
+            <h1>0</h1>
+          </div>
+          <!-- Buttons -->
+          <div class=" calculator-buttons">
+            <button class="operator" value="+">+</button>
+            <button class="operator" value="-">-</button>
+            <button class="operator" value="*">×</button>
+            <button class="operator" value="/">÷</button>
+            <button value="7">7</button>
+            <button value="8">8</button>
+            <button value="9">9</button>
+            <button value="4">4</button>
+            <button value="5">5</button>
+            <button value="6">6</button>
+            <button value="1">1</button>
+            <button value="2">2</button>
+            <button value="3">3</button>
+            <button class="decimal" value=".">.</button>
+            <button value="0">0</button>
+            <button class="clear" id="clear-btn" value="C">C</button>
+            <button class="equal-sign operator" value="=">=</button>
+          </div>
         </div>
       </div>
     </div>
+    <section class="col">
+      <div class="key-takeaways">
+        <h2 class="title">Key Takeaways</h2>
+        <div class="html">
+          <h3>HTML - content</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque recusandae cupiditate sequi repellendus
+            ducimus inventore optio quidem est voluptates placeat, omnis facilis molestiae id fugiat modi incidunt?
+            Quae, facere quod.</p>
+        </div>
+        <div class="css">
+          <h3>CSS - presentation</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis culpa optio ea facere, nostrum alias nihil
+            mollitia eius impedit tempore doloremque voluptate accusantium, sapiente vitae illo fugiat. Laudantium,
+            velit soluta!</p>
+        </div>
+        <div class="javascript">
+          <h3>JavaScript - interaction</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores id laborum velit nulla praesentium
+            exercitationem ea totam, autem, aliquid ullam voluptatem harum quidem officiis, repellat laboriosam minus
+            beatae. Quidem, quas.</p>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
 
-    <!-- Script -->
-    <script src="script.js"></script>
-  </body>
 </html>
